@@ -25,7 +25,7 @@ io.on("connection", (socket) => {
     io.emit("getOnlineUsers", onlineUsers);
   });
 
-  socket.on("sendMsg ", (msg) => {
+  socket.on("sendMsg", (msg) => {
     console.log("Received message:", msg); // Log the message you're receiving
     console.log(msg.recipientUserId, "hi reciever");
     // const user = onlineUsers.find((user) => {
