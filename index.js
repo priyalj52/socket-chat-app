@@ -2,7 +2,8 @@ const { Server } = require("socket.io");
 
 const io = new Server({ 
   cors: {
-      origin: ["http://localhost:3000", "https://wechattt.netlify.app/"],
+      // origin: ["http://localhost:3000", "https://wechattt.netlify.app/"],
+      origin:"*",
       methods: ["GET", "POST"]
   }
 });
@@ -54,7 +55,7 @@ io.on("connection", (socket) => {
     io.emit("getOnlineUsers", onlineUsers);
   });
   socket.on("connect", () => {
-    console.log(socket.connected, "yo"); // true
+    console.log(socket.connected, "yo000"); // true
   });
 });
 
